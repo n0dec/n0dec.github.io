@@ -32,6 +32,7 @@
 						<nav>
 							<ul>
 								<li><a href="#intro">Intro</a></li>
+								<li><a href="#rules">Rules</a></li>
 							</ul>
 						</nav>
 						<div>
@@ -52,6 +53,19 @@
 								<p>In progress..</p>
 							</article>
 
+						<!-- Rules -->
+							<article id="rules">
+								<div class="field">
+									<label>Enter raw event</label>
+									<textarea id="raw" rows="10"></textarea>
+									<br>
+									<ul class="actions">
+										<button onclick="raw_to_rule()" class="primary">Convert</button>
+									</ul>
+									<textarea id="rule" rows="10" spellcheck="false"></textarea>
+								</div>
+							</article>
+
 					</div>
 
 				<!-- Footer -->
@@ -70,6 +84,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/rules.js"></script>
 
 	</body>
 </html>

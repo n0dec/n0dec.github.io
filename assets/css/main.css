@@ -462,6 +462,11 @@ input, select, textarea {
 
 	textarea {
 		padding: 0.75rem 1rem;
+		font-family: Consolas, monaco, monospace;
+		font-size: 0.7rem;
+		resize: none;
+		white-space: nowrap;
+		overflow: auto;
 	}
 
 	input[type="checkbox"],
@@ -1060,7 +1065,8 @@ input, select, textarea {
 		.button.primary {
 			background-color: #ffffff;
 			color: #1b1f22 !important;
-			font-weight: 600;
+			/* font-weight: 600; */
+			margin: auto;
 		}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
