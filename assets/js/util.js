@@ -585,3 +585,42 @@
 	};
 
 })(jQuery);
+
+window.onload = get_blogs();
+
+function get_blogs() {
+
+	var bloglist = [{"img": "https://cdn.alienvault.com/blog-content/satan_lab.png", "url": "https://www.alienvault.com/blogs/labs-research/satan-ransomware-spawns-new-methods-to-spread", "title": "Satan Ransomware Spawns New Methods to Spread", "description": "The main goal of this sample is to drop Satan Ransomware, encrypt the victim's host, and then request a Bitcoin payment. Afterwards, the sample will also try to spread in the network using exploits such as EternalBlue."}];
+
+	bloglist = bloglist.reverse();
+
+	for(blog in bloglist){
+		var div = document.createElement('div');
+		div.classList.add('card')
+		div.onclick=function(){window.open(bloglist[blog]['url'],'_blank');}
+
+		var img = document.createElement('img');
+		img.setAttribute('width', '100%');
+		img.src = bloglist[blog]['img'];
+
+		var container = document.createElement('div');
+		container.classList.add('container')
+
+		var h3 = document.createElement('h3');
+		var p = document.createElement('p');
+
+
+		h3.textContent = bloglist[blog]['title'];
+		p.textContent = bloglist[blog]['description'];
+
+		container.appendChild(h3);
+		container.appendChild(p);
+
+		div.appendChild(img);
+		div.appendChild(container);
+		document.getElementById("bloglist").appendChild(div);
+
+		var br = document.createElement('br');
+		document.getElementById("bloglist").appendChild(br);
+	}
+}
