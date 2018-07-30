@@ -596,8 +596,8 @@ function get_blogs() {
 
 	for(blog in bloglist){
 		var div = document.createElement('div');
-		div.classList.add('card')
-		div.onclick=function(){window.open(bloglist[blog]['url'],'_blank');}
+		div.setAttribute('class', 'card');
+		div.setAttribute('onclick', 'window.open(\'' + bloglist[blog]['url'] + '\', \'_blank\');');
 
 		var img = document.createElement('img');
 		img.setAttribute('width', '100%');
