@@ -14,6 +14,8 @@ function format_to_rule(data) {
 
 			for (var i = 1; i < raw_split2.length; i++) {
 				var f_split = raw_split2[i].split(': ')
+				if (f_split[1] == null)
+					f_split[1] = "";
 				rules['rule' + rule_n].payload[f_split[0]] = f_split[1]
 			}
 		}
@@ -37,6 +39,8 @@ function text_to_rule(data){
 
 			for (var i = 14; i < raw_split2.length; i++) {
 				var f_split = raw_split2[i].split(': ')
+				if (f_split[1] == null)
+					f_split[1] = "";
 				rules['rule' + rule_n].payload[f_split[0]] = f_split[1]
 			}
 		}
@@ -78,7 +82,7 @@ function json_rules(rules){
 
 	set['name'] = "Rule set name";
 	set['version'] = "0.1";
-	set['author'] = "n0dec.github.io/#rules";
+	set['author'] = "https://n0dec.github.io/#rules";
 	set['description'] = "Description for rule set.";
 	set.rules = rules;
 
