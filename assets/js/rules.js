@@ -59,10 +59,8 @@ function xml_to_rule(data){
 		}
 		catch(err) {
 			console.log("Error: Invalid XML object");
-			return;
+			continue;
 		}
-
-		// console.log();
 		rule_n = n + 1
 		rules['rule' + rule_n] = {}
 		rules['rule' + rule_n].enabled = true;
