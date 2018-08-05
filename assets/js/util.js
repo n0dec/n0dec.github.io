@@ -609,7 +609,6 @@ function get_blogs() {
 		var h3 = document.createElement('h3');
 		var p = document.createElement('p');
 
-
 		h3.textContent = bloglist[blog]['title'];
 		p.textContent = bloglist[blog]['description'];
 
