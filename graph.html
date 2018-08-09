@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>n0dec | Graph</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/graph.css" />
+		<script src="assets/js/cytoscape.min.js"></script>
+		<script src="assets/js/rules.js"></script>
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-show" style="display:block" id="sidebar">
+			<button onclick="sidebar_close()" class="bar-button">☰</button>
+			<textarea id="raw" rows="10" spellcheck="false" placeholder="Raw events"></textarea>
+			<button class="button">Graph</button>
+		</div>
+
+		<!-- Page Content -->
+		<div class="content">
+			<div class="sidebar sidebar-hidden">
+					<button class="bar-button" onclick="sidebar_open()">☰</button>
+			</div>
+			<div style="width: calc(100% - 50px); float:right">
+				<div id="graph">
+				</div>
+			</div>
+		</div>
+		<script>function sidebar_open(){document.getElementById("sidebar").style.display="block"}function sidebar_close(){document.getElementById("sidebar").style.display="none"}</script>
+	</body>
+</html>
