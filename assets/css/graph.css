@@ -84,3 +84,17 @@ textarea:focus {
 	text-transform: uppercase;
 	white-space: nowrap;
 }
+
+.qtip {
+	position: absolute;
+	display: none;
+	height: 100px;
+	width: 400px;
+	font-size: 0.7rem;
+	padding: 0.75rem 1rem;
+	background-color: rgba(27, 31, 34);
+	color: white;
+	font-family: Consolas, monaco, monospace;
+	border-top: 15px solid #ccc;
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+}
