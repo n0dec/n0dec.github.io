@@ -98,3 +98,21 @@ textarea:focus {
 	border-top: 15px solid #ccc;
 	box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
 }
+
+.copyright {
+	width: 500px;
+	letter-spacing: 0.2rem;
+	padding: 0.75rem 0;
+	font-size: 0.5rem;
+	opacity: 0.75;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: lighter;
+}
+
+span{
+	bottom: 0;
+	position: fixed;
+}
