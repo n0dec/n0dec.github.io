@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>n0dec | Graph</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/graph.css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.min.js"></script>
+		<script src="assets/js/cytoscape.min.js"></script>
+		<script src="assets/js/cytoscape-qtip.js"></script>
+		<script src="assets/js/rules.js"></script>
+		<script src="assets/js/dict.js"></script>
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-show" style="display:block" id="sidebar">
+			<button onclick="sidebar_close()" class="bar-button">☰</button>
+			<textarea id="raw" rows="10" spellcheck="false" placeholder="Raw events"></textarea>
+			<button class="button" onclick="to_graph()">Graph</button>
+			<span class="copyright"><p>&copy; 2016-2018 Javier Ruiz | All rights reserved </p></span>
+		</div>
+
+		<!-- Page Content -->
+		<div class="content">
+			<div class="sidebar sidebar-hidden">
+					<button class="bar-button" onclick="sidebar_open()">☰</button>
+			</div>
+			<div style="width: calc(100% - 50px); float:right">
+				<div id="graph">
+				</div>
+			</div>
+		</div>
+		<script>function sidebar_open(){document.getElementById("sidebar").style.display="block"}function sidebar_close(){document.getElementById("sidebar").style.display="none"}</script>
+	</body>
+</html>
