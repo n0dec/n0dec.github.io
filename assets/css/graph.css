@@ -31,7 +31,6 @@ textarea:focus {
 	background-color: white;
 }
 
-
 .sidebar {
 	color: white;
 	height: 100%;
@@ -47,10 +46,15 @@ textarea:focus {
 .sidebar-show {
 	position: fixed;
 	overflow-x: auto;
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
 }
 
 .sidebar-hidden:hover {
 	background-color: rgba(27, 31, 34, 0.9);
+}
+
+.row{
+	display: table-row;
 }
 
 .bar-button {
@@ -84,6 +88,17 @@ textarea:focus {
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
+}
+
+.link {
+	color: white;
+	padding: 15px 35px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.link:hover {
+	cursor: pointer;
+	color: #0277BD;
 }
 
 .qtip {
