@@ -103,7 +103,7 @@ function rule_format() {
 	} else if (first_line.substring(0, 6) == 'Event[') {
 		json_rules(text_to_rule(data));
 	} else {
-		console.log('format not recognized');
+		document.getElementById("rule").innerHTML = "Invalid event format!";
 	}
 
 }
@@ -121,7 +121,7 @@ function to_graph(){
 	} else if (first_line.substring(0, 6) == 'Event[') {
 		rules = text_to_rule(data);
 	} else {
-		console.log('format not recognized');
+		document.getElementById("raw").innerHTML = "Invalid event format!";
 	}
 
 	var nodes = get_nodes(rules);

@@ -46,6 +46,7 @@ textarea:focus {
 
 .sidebar-show {
 	position: fixed;
+	overflow-x: auto;
 }
 
 .sidebar-hidden:hover {
