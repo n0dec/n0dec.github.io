@@ -104,17 +104,27 @@ textarea:focus {
 .qtip {
 	position: absolute;
 	display: none;
-	height: 100px;
-	width: 400px;
+	height: 125px;
 	font-size: 0.7rem;
-	padding: 0.75rem 1rem;
 	background-color: rgba(27, 31, 34);
 	color: white;
-	overflow-x: auto;
-	white-space: nowrap;
 	font-family: Consolas, monaco, monospace;
 	border-top: 15px solid #ccc;
 	box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+}
+
+.qtip-text {
+	height: 90%;
+	padding: 0.75rem 1rem 0rem 1rem;
+	margin: 0;
+	border-radius: 0;
+	border: none;
+}
+
+.qtip-text:focus {
+	box-shadow: 0 0px;
+	border: none;
+	background-color: transparent;
 }
 
 .copyright {

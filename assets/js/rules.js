@@ -215,11 +215,12 @@ function to_graph(){
 
 	cy.elements('node').qtip({
 		content: function() {
-			tooltip = this.data('event_category') + "<br>";
+			tooltip = "<textarea class=\"qtip-text\" spellcheck=\"false\">" + this.data('event_category') + "\n";
 			var data = this.data('event_data');
 			for(var n in data){
-				tooltip += data[n][0] + ": " + data[n][1] + "<br>";
+				tooltip += data[n][0] + ": " + data[n][1] + "\n";
 			}
+			tooltip += "</textarea>"
 			return tooltip;
 		}
 	});
