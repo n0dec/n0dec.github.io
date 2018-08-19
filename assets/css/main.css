@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(15, 15, 15, 0.8);
 	border-radius: 4px;
 }
 
@@ -953,11 +953,11 @@ input, select, textarea {
 				}
 
 				ul.icons li a.icon-github {
-					background-color: #FF8F00;
+					background-color: #FF9800;
 				}
 
 				ul.icons li a.icon-medium {
-					background-color: #424242;
+					background-color: #212121;
 				}
 
 				ul.icons li a.icon-linkedin {
@@ -1172,15 +1172,15 @@ input, select, textarea {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+			-moz-transition: background-color 2s ease-in-out;
+			-webkit-transition: background-color 2s ease-in-out;
+			-ms-transition: background-color 2s ease-in-out;
+			transition: background-color 2s ease-in-out;
+			-moz-transition-delay: 0.5s;
+			-webkit-transition-delay: 0.5s;
+			-ms-transition-delay: 0.5s;
+			transition-delay: 0.5s;
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.6), rgba(19, 21, 25, 0.6)), url("../../images/overlay.png");
 			background-size: auto, 256px 256px;
 			background-position: center, center;
 			background-repeat: no-repeat, repeat;
