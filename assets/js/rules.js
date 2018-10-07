@@ -89,7 +89,7 @@ function json_rules(rules){
 	set.rules = rules;
 
 	var json = JSON.stringify(set, null, "\t");
-	document.getElementById("rule").innerHTML = json;
+	document.getElementById("rule").value = json;
 }
 
 function rule_format() {
@@ -103,7 +103,7 @@ function rule_format() {
 	} else if (first_line.substring(0, 6) == 'Event[') {
 		json_rules(text_to_rule(data));
 	} else {
-		document.getElementById("rule").innerHTML = "Invalid event format!";
+		document.getElementById("rule").value = "Invalid event format!";
 	}
 
 }
@@ -113,15 +113,20 @@ function to_graph(){
 	var first_line = data.split('\n')[0];
 
 	var rules = [];
-
-	if (first_line.substring(0, 6) == '<Event'){
-		rules = xml_to_rule(data);
-	} else if ((first_line.indexOf(':') != -1) && (first_line.indexOf('[') == -1)) {
-		rules = format_to_rule(data);
-	} else if (first_line.substring(0, 6) == 'Event[') {
-		rules = text_to_rule(data);
-	} else {
-		document.getElementById("raw").innerHTML = "Invalid event format!";
+	
+	try {
+		var json = JSON.parse(data);
+		rules = json.rules;
+	} catch(e) {
+		if (first_line.substring(0, 6) == '<Event'){
+			rules = xml_to_rule(data);
+		} else if ((first_line.indexOf(':') != -1) && (first_line.indexOf('[') == -1)) {
+			rules = format_to_rule(data);
+		} else if (first_line.substring(0, 6) == 'Event[') {
+			rules = text_to_rule(data);
+		} else {
+			document.getElementById("raw").value = "Invalid event format!";
+		}
 	}
 
 	var nodes = get_nodes(rules);
