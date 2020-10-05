@@ -20,5 +20,7 @@ var category = {
 	"18": "Pipe Connected",
 	"19": "WmiEventFilter activity detected",
 	"20": "WmiEventConsumer activity detected",
-	"21": "WmiEventConsumerToFilter activity detected"
+	"21": "WmiEventConsumerToFilter activity detected",
+	"22": "Dns query",
+	"23": "File Delete"
 };
