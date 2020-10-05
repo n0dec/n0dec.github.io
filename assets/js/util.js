@@ -589,9 +589,8 @@
 window.onload = get_blogs();
 
 function get_blogs() {
-
-	var bloglist = [{"img": "https://cdn.alienvault.com/blog-content/satan_lab.png", "url": "https://www.alienvault.com/blogs/labs-research/satan-ransomware-spawns-new-methods-to-spread", "title": "Satan Ransomware Spawns New Methods to Spread", "description": "The main goal of this sample is to drop Satan Ransomware, encrypt the victim's host, and then request a Bitcoin payment. Afterwards, the sample will also try to spread in the network using exploits such as EternalBlue."},{"img": "https://cdn.alienvault.com/blog-content/malware.png", "url": "https://www.alienvault.com/blogs/labs-research/malware-analysis-using-osquery-part-1", "title": "Malware Analysis using Osquery | Part 1", "description": "In this blog series, we’ll analyze different malware families, looking at the types of events generated on the endpoint and how we can use Osquery to detect them."},{"img": "https://cdn.alienvault.com/blog-content/Malware_Analysis_Using_Osquery.png", "url": "https://www.alienvault.com/blogs/labs-research/malware-analysis-using-osquery-part-2", "title": "Malware Analysis using Osquery | Part 2", "description": "In this post, we are going to see another common technique that malware uses, persistence. To do so, we will continue using Osquery to explore the registry and startup_items tables."}];
-
+	var bloglist = [{"img": "https://cdn-cybersecurity.att.com/blog-content/satan_lab.png", "url": "https://cybersecurity.att.com/blogs/labs-research/satan-ransomware-spawns-new-methods-to-spread", "title": "Satan Ransomware Spawns New Methods to Spread", "description": "The main goal of this sample is to drop Satan Ransomware, encrypt the victim's host, and then request a Bitcoin payment. Afterwards, the sample will also try to spread in the network using exploits such as EternalBlue."},{"img": "https://cdn-cybersecurity.att.com/blog-content/malware.png", "url": "https://cybersecurity.att.com/blogs/labs-research/malware-analysis-using-osquery-part-1", "title": "Malware Analysis using Osquery | Part 1", "description": "In this blog series, we’ll analyze different malware families, looking at the types of events generated on the endpoint and how we can use Osquery to detect them."},{"img": "https://cdn-cybersecurity.att.com/blog-content/Malware_Analysis_Using_Osquery.png", "url": "https://cybersecurity.att.com/blogs/labs-research/malware-analysis-using-osquery-part-2", "title": "Malware Analysis using Osquery | Part 2", "description": "In this post, we are going to see another common technique that malware uses, persistence. To do so, we will continue using Osquery to explore the registry and startup_items tables."}];
+	
 	bloglist = bloglist.reverse();
 
 	for(blog in bloglist){
@@ -623,3 +622,4 @@ function get_blogs() {
 		document.getElementById("bloglist").appendChild(br);
 	}
 }
+
